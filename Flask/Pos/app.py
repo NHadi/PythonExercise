@@ -5,8 +5,8 @@ from flask_jwt import JWT, jwt_required, current_identity
 from security import authenticate, identity
 
 app = Flask(__name__)
-app.config['PROPAGATE_EXCEPTIONS'] = True # To allow flask propagating exception even if debug is set to false on app
-app.secret_key = 'jose'
+app.config['PROPAGATE_EXCEPTIONS'] = True
+app.secret_key = 'qwertyuiop123456789'
 api = Api(app)
 
 jwt = JWT(app, authenticate, identity)
